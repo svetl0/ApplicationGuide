@@ -34,23 +34,36 @@ public class LikedPlaces extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liked_places);
 
-        // initializing our variables.
         courseRV = findViewById(R.id.ListForLIkedPlaces);
 
+        FloatingActionButton toF = findViewById(R.id.tofeedback2);
+        toF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LikedPlaces.this, FeedbackActivity.class);
+                startActivity(i);
+            }
+        });
 
-        // initializing our variable for firebase
-        // firestore and getting its instance.
+        FloatingActionButton toInfo = findViewById(R.id.backtoinfo2);
+        toInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LikedPlaces.this, InfoActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+
+
+
         db = FirebaseFirestore.getInstance();
-
-        // creating our new array list
         placeArrayList = new ArrayList<>();
         courseRV.setHasFixedSize(true);
         courseRV.setLayoutManager(new LinearLayoutManager(this));
-
-        // adding our array list to our recycler view adapter class.
         dataAdapter = new AdapterForLikedActivvity(placeArrayList, this);
 
-        // setting adapter to our recycler view.
         courseRV.setAdapter(dataAdapter);
         String ID = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
 
@@ -62,10 +75,10 @@ public class LikedPlaces extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.e("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", document.getId() + " => " + document.getData());
+                                Log.e("AAAAAA", document.getId() + " => " + document.getData());
                                 Places p = document.toObject(Places.class);
 
-                                //Log.e("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", p.getName());
+
                                 placeArrayList.add(p);
                             }
                             dataAdapter.notifyDataSetChanged();
@@ -74,8 +87,6 @@ public class LikedPlaces extends AppCompatActivity {
                         }
                     }
                 });
-
-
     }
 
 

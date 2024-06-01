@@ -29,7 +29,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     private Context context;
     private ArrayList<Places> likedPlaces;
 
-    // creating constructor for our adapter class
+
     public DataAdapter(ArrayList<Places> coursesArrayList, Context context) {
         this.placesArrayList = coursesArrayList;
         this.context = context;
@@ -38,17 +38,15 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     @NonNull
     @Override
     public DataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // passing our layout file for displaying our card item
         return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.data_item, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull DataAdapter.ViewHolder holder, int position) {
-        // setting data to our text views from our modal class.
         Places place  = placesArrayList.get(position);
         holder.idName.setText(place.getIdName());
         holder.detailsdata.setText(place.getDetailsdata());
-        //holder.imgIDview.setImageResource(place.getImgId());
+
         Picasso.get().load(place.getImg()).into(holder.imgIDview);
 
         holder.fab.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +65,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         holder.liked.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //добавление в бд название и описание места
 
                 String nameOfPlace = place.getIdName();
 
@@ -95,11 +92,10 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        // returning the size of our array list.
         return placesArrayList.size();
     }
     class ViewHolder extends RecyclerView.ViewHolder {
-        // creating variables for our text views.
+
         private final TextView idName;
         private final TextView detailsdata;
         private ImageView imgIDview;
@@ -108,7 +104,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            // initializing our text views.
+
             idName = itemView.findViewById(R.id.idNameForLikedActivity);
             detailsdata = itemView.findViewById(R.id.DataDescribtionForLikedActivity);
             imgIDview = itemView.findViewById(R.id.imgIdForLikedActivity);

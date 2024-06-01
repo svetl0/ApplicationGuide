@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/img_6"
+    android:background="@drawable/bckground"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="630dp"
             android:background="@drawable/viewpager_bkg"
-            android:backgroundTint="#63B388FF"
+            android:backgroundTint="#6D8692F7"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

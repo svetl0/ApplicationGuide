@@ -15,8 +15,6 @@ public class MainPlacesActivity extends TabActivity {
         setContentView(R.layout.activity_main_places);
         TabHost tabHost = getTabHost();
 
-        // инициализация была выполнена в getTabHost
-        // метод setup вызывать не нужно
 
         TabHost.TabSpec tabSpec;
 

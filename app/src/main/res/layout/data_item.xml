@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    app:cardBackgroundColor="#E6C7EC"
+    app:cardBackgroundColor="@color/lavender"
 
     app:cardCornerRadius="6dp"
     app:cardElevation="4dp">
 
     <LinearLayout
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="2dp"
         android:orientation="vertical"
         android:padding="4dp">
@@ -24,7 +24,7 @@
             android:id="@+id/idNameForLikedActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#836E87"
+            android:background="@color/purple_500"
             android:padding="2dp"
             android:text="Title"
             android:textColor="@color/white"
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#F0E4F3"
+            android:background="@color/color_two"
             android:padding="2dp"
             android:text="Description"
             android:textColor="@color/black" />
@@ -45,6 +45,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/imgIdForLikedActivity"
                 android:layout_width="227dp"
@@ -57,7 +58,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/ic_launcher_foreground"/>
+                app:srcCompat="@drawable/ic_launcher_foreground" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/onMapFabForLikedActivity"

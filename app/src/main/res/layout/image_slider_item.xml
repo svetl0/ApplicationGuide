@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/forfeedback"
     app:cardBackgroundColor="#FFFFFF"
     app:cardCornerRadius="8dp">
 
@@ -11,6 +12,7 @@
         android:id="@+id/idIVimage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:background="@drawable/forfeedback"
         android:contentDescription="@string/app_name" />
 
 </androidx.cardview.widget.CardView>

@@ -30,20 +30,34 @@ public class MapTour3 extends Fragment {
         //initialize map
         mapView = (MapView) rootView.findViewById(R.id.mapForTour3);
         mapView.onCreate(savedInstanceState);
-        LatLng position = new LatLng(37.77493, -122.41942);
-        String markerText = "San Fransisco";
+        LatLng position1 = new LatLng(48.71507761239745, 44.53293150509639);
+        LatLng position2 = new LatLng(48.70897440763924, 44.516780697220696);
+        LatLng position3 = new LatLng(48.52001150058183, 44.511176179772285);
+        LatLng position4 = new LatLng(48.704503862462964, 44.51180671256251);
+        LatLng position5 = new LatLng(48.704564083984096, 44.5086260511946);
+        LatLng position6 = new LatLng(48.71219569683192, 44.5235605501199);
+        LatLng position7 = new LatLng(48.71449226303943, 44.52446382790494);
+
+
+
         mapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap googleMap) {
                 Log.i("DEBUG", "onMapReady");
-                Marker marker  = googleMap.addMarker(new MarkerOptions().position(position).title(markerText));
 
-                //zoom to position with level 16
-                CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(position, 16);
+                Marker marker  = googleMap.addMarker(new MarkerOptions().position(position1).title("Музей-панорама Сталинградская битва"));
+                Marker marker2  = googleMap.addMarker(new MarkerOptions().position(position2).title("Память"));
+                Marker marker3 = googleMap.addMarker(new MarkerOptions().position(position3).title("Сарепта"));
+                Marker marker4  = googleMap.addMarker(new MarkerOptions().position(position4).title("Краеведческий Музей"));
+                Marker marker5  = googleMap.addMarker(new MarkerOptions().position(position5).title("Музей занимательных наук Эйнштейна"));
+                Marker marker6  = googleMap.addMarker(new MarkerOptions().position(position6).title("Волгоградский музей изобразительных искусств им. И.И. Машкова"));
+                Marker marker7  = googleMap.addMarker(new MarkerOptions().position(position7).title("Волгоградский планетарий"));
+
+
+                CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(position1, 15);
                 googleMap.animateCamera(cameraUpdate);
             }
         });
-
         return rootView;
     }
 

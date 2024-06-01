@@ -80,162 +80,103 @@ public class TourActivity extends AppCompatActivity {
         db.collection("sliderForTour1").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-
-                // inside the on success method we are running a for loop
-                // and we are getting the data from Firebase Firestore
                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-
-                    // after we get the data we are passing inside our object class.
                     SliderData sliderData = documentSnapshot.toObject(SliderData.class);
                     Log.e("FFFFFFFFFF", sliderData.getImgUrl());
                     SliderData model = new SliderData();
 
-                    // below line is use for setting our
-                    // image url for our modal class.
                     model.setImgUrl(sliderData.getImgUrl());
 
-                    // after that we are adding that
-                    // data inside our array list.
                     sliderDataArrayList1.add(model);
-
-                    // after adding data to our array list we are passing
-                    // that array list inside our adapter class.
                     SliderAdapter adapter = new SliderAdapter(TourActivity.this, sliderDataArrayList1);
 
-                    // below line is for setting adapter
-                    // to our slider view
                     sliderView1.setSliderAdapter(adapter);
                     sliderView1.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
 
-                    // below line is for setting auto cycle duration.
                     sliderView1.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
 
-                    // below line is for setting
-                    // scroll time animation
                     sliderView1.setScrollTimeInSec(3);
 
-                    // below line is for setting auto
-                    // cycle animation to our slider
                     sliderView1.setAutoCycle(true);
 
-                    // below line is use to start
-                    // the animation of our slider view.
                     sliderView1.startAutoCycle();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                // if we get any error from Firebase we are
-                // displaying a toast message for failure
+
                 Toast.makeText(TourActivity.this, "Fail to load slider data..", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void loadImages2() {
-        // getting data from our collection and after
-        // that calling a method for on success listener.
+
         db.collection("sliderForTour2").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
-                // inside the on success method we are running a for loop
-                // and we are getting the data from Firebase Firestore
+
                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
 
-                    // after we get the data we are passing inside our object class.
                     SliderData sliderData = documentSnapshot.toObject(SliderData.class);
                     SliderData model = new SliderData();
 
-                    // below line is use for setting our
-                    // image url for our modal class.
                     model.setImgUrl(sliderData.getImgUrl());
 
-                    // after that we are adding that
-                    // data inside our array list.
+
                     sliderDataArrayList2.add(model);
 
-                    // after adding data to our array list we are passing
-                    // that array list inside our adapter class.
                     SliderAdapter adapter = new SliderAdapter(TourActivity.this, sliderDataArrayList2);
 
-                    // below line is for setting adapter
-                    // to our slider view
                     sliderView2.setSliderAdapter(adapter);
                     sliderView2.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
 
-                    // below line is for setting auto cycle duration.
                     sliderView2.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
 
-                    // below line is for setting
-                    // scroll time animation
                     sliderView2.setScrollTimeInSec(3);
-
-                    // below line is for setting auto
-                    // cycle animation to our slider
                     sliderView2.setAutoCycle(true);
 
-                    // below line is use to start
-                    // the animation of our slider view.
                     sliderView2.startAutoCycle();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                // if we get any error from Firebase we are
-                // displaying a toast message for failure
                 Toast.makeText(TourActivity.this, "Fail to load slider data..", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void loadImages3() {
-        // getting data from our collection and after
-        // that calling a method for on success listener.
+
         db.collection("sliderForTour3").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
-                // inside the on success method we are running a for loop
-                // and we are getting the data from Firebase Firestore
+
                 for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
 
-                    // after we get the data we are passing inside our object class.
                     SliderData sliderData = documentSnapshot.toObject(SliderData.class);
                     SliderData model = new SliderData();
 
-                    // below line is use for setting our
-                    // image url for our modal class.
                     model.setImgUrl(sliderData.getImgUrl());
 
-                    // after that we are adding that
-                    // data inside our array list.
                     sliderDataArrayList3.add(model);
 
-                    // after adding data to our array list we are passing
-                    // that array list inside our adapter class.
                     SliderAdapter adapter = new SliderAdapter(TourActivity.this, sliderDataArrayList3);
 
-                    // below line is for setting adapter
-                    // to our slider view
                     sliderView3.setSliderAdapter(adapter);
                     sliderView3.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
 
-                    // below line is for setting auto cycle duration.
+
                     sliderView3.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
 
-                    // below line is for setting
-                    // scroll time animation
                     sliderView3.setScrollTimeInSec(3);
 
-                    // below line is for setting auto
-                    // cycle animation to our slider
                     sliderView3.setAutoCycle(true);
 
-                    // below line is use to start
-                    // the animation of our slider view.
                     sliderView3.startAutoCycle();
 
                 }
@@ -243,8 +184,7 @@ public class TourActivity extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                // if we get any error from Firebase we are
-                // displaying a toast message for failure
+
                 Toast.makeText(TourActivity.this, "Fail to load slider data..", Toast.LENGTH_SHORT).show();
             }
         });

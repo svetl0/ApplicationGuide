@@ -2,19 +2,24 @@ package com.example.myapplicationguide;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
 public class FeedbackActivity extends AppCompatActivity {
     EditText email, name, comment;
-    Button send, back, details;
+    Button send, details;
     Firebase firebase;
 
     @Override
@@ -30,6 +35,7 @@ public class FeedbackActivity extends AppCompatActivity {
         String ID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
         firebase = new Firebase("https://guide-app-d325a-default-rtdb.firebaseio.com/Users" + ID);
         send.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
                 details.setEnabled(true);
@@ -65,21 +71,44 @@ public class FeedbackActivity extends AppCompatActivity {
                 }else{
 
                     send.setEnabled(true);
+
                 }
-                Toast.makeText(FeedbackActivity.this, "Data is sended", Toast.LENGTH_LONG).show();
+                //Toast.makeText(FeedbackActivity.this, "Data is sended", Toast.LENGTH_LONG).show();
+                details.setBackgroundColor(R.color.lavender);
 
                 details.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        new AlertDialog.Builder(FeedbackActivity.this)
-                                .setTitle("details")
-                                .setMessage("Name - " + nameData + "\nEmail - " + emailData + "\nMeassage - " + commentData).show();
+                        ConstraintLayout lt = findViewById(R.id.dialoglt);
+                        View viewd = LayoutInflater.from(FeedbackActivity.this).inflate(R.layout.dialog_layout, lt);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(FeedbackActivity.this);
+                        builder.setView(viewd);
+                        final AlertDialog d = builder.create();
+                        TextView dName = viewd.findViewById(R.id.username);
+                        dName.setText("Name  - " + nameData);
+                        TextView dEmail = viewd.findViewById(R.id.useremail);
+                        dEmail.setText("Email - "+emailData);
+                        TextView dMes = viewd.findViewById(R.id.usermessage);
+                        dMes.setText("Message - "+ commentData);
+                        d.show();
                     }
                 });
 
 
             }
         });
+        Button back = findViewById(R.id.buttonback);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(FeedbackActivity.this, MainPlacesActivity.class);
+                startActivity(i);
+            }
+        });
+
+    }
+
+    void showMyDialog(){
 
     }
 }

@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
     tools:context=".InfoActivity">
 
 
     <ScrollView
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
             tools:context=".InfoActivity">
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewGraph"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_500"
                 android:elevation="10dp"
+                app:cardBackgroundColor="#27FFFFFF"
                 app:cardCornerRadius="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -36,11 +40,10 @@
                 app:layout_constraintVertical_bias="0.007">
 
 
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/edittext_bkg"
                     android:orientation="horizontal"
                     android:weightSum="2">
 
@@ -51,8 +54,8 @@
 
                     <org.eazegraph.lib.charts.PieChart
                         android:id="@+id/piechart"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="87dp"
+                        android:layout_height="113dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
@@ -62,23 +65,23 @@
                         />
 
                     <LinearLayout
-                        android:layout_width="111dp"
-                        android:layout_height="179dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:orientation="vertical">
-                        <LinearLayout
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"
-                            android:layout_gravity="center_vertical">
 
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
 
 
                             <TextView
                                 android:id="@+id/textView3"
-                                android:layout_height="wrap_content"
                                 android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:text="   Стоимость проезда по городу"
                                 android:textColor="@color/black"
                                 android:textSize="15sp"
@@ -99,8 +102,8 @@
 
                             <!--Text view to display R -->
                             <TextView
-                                android:layout_height="wrap_content"
                                 android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:paddingLeft="10dp"
                                 android:text="Такси, от 150 рублей" />
 
@@ -108,8 +111,8 @@
 
                         <!--Linear layout to display Python-->
                         <LinearLayout
-                            android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginTop="5dp">
 
@@ -121,8 +124,8 @@
 
                             <!--Text view to display python text -->
                             <TextView
-                                android:layout_height="wrap_content"
                                 android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:paddingLeft="10dp"
                                 android:text="Троллейбус, 32 рубля" />
 
@@ -130,8 +133,8 @@
 
                         <!--Linear layout to display C++-->
                         <LinearLayout
-                            android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginTop="5dp">
 
@@ -152,8 +155,8 @@
 
                         <!--Linear layout to display Java-->
                         <LinearLayout
-                            android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginTop="5dp">
 
@@ -173,8 +176,8 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginTop="5dp">
 
@@ -204,9 +207,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cardViewGraph"
-                android:elevation="10dp"
-                app:cardCornerRadius="10dp"
 
+                android:elevation="10dp"
+                app:cardBackgroundColor="@color/color_white"
+                app:cardCornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -218,6 +222,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:background="#FFFFFF"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -228,24 +233,26 @@
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/ToListCard"
-                            android:layout_height="match_parent"
                             android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:background="@drawable/edittext_bkg"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="20dp">
 
 
                             <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_height="match_parent"
                                 android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1">
 
                                 <Button
                                     android:id="@+id/ToPLacesButton"
-                                    android:layout_height="match_parent"
                                     android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:text="К местам"
+                                    android:backgroundTint="@color/lavender"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -255,23 +262,25 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:layout_height="match_parent"
                             android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
+                            android:background="@drawable/edittext_bkg"
                             app:cardCornerRadius="20dp"
                             app:cardElevation="20dp">
 
 
                             <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_height="match_parent"
-                                android:layout_width="match_parent">
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
                                 <Button
                                     android:id="@+id/ToToursButton"
-                                    android:layout_height="match_parent"
                                     android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:text="К маршрутам"
+                                    android:backgroundTint="@color/lavender"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -288,7 +297,7 @@
                     <com.smarteist.autoimageslider.SliderView
                         android:id="@+id/InfoSlider"
                         android:layout_width="match_parent"
-                        android:layout_height="141dp"
+                        android:layout_height="120dp"
 
                         app:sliderAnimationDuration="600"
                         app:sliderAutoCycleDirection="back_and_forth"
@@ -306,12 +315,15 @@
                     </com.smarteist.autoimageslider.SliderView>
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="20dp"
+                        android:background="#FFFFFF"
+
                         android:text="Основные экскурсии и развлечения: "
                         android:textSize="20sp"
+                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                     <!--View to display the line-->
@@ -323,18 +335,19 @@
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="25dp"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <!--Text view to display R -->
                         <TextView
-                            android:layout_width="258dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
                             android:text="Часовая прогулка на теплоходе по Волге"
                             android:textSize="15sp" />
@@ -342,17 +355,18 @@
 
                         <TextView
                             android:id="@+id/one"
-                            android:layout_width="116dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:layout_marginRight="9dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
                             android:text="От 350 руб."
                             android:textAlignment="textEnd"
                             android:textColor="@color/color_one"
                             android:textSize="15sp"
                             android:textStyle="bold" />
-                    </RelativeLayout>
+                    </LinearLayout>
 
                     <!--View to display the line-->
                     <View
@@ -362,16 +376,17 @@
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="39dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="25dp"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="272dp"
+                            android:layout_width="260dp"
                             android:layout_height="match_parent"
                             android:fontFamily="sans-serif-light"
                             android:text="Речная прогулка с зеленой стоянкой (на день)"
@@ -384,8 +399,10 @@
                         <TextView
                             android:id="@+id/tvPython"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
                             android:text="От 1500 руб."
                             android:textAlignment="textEnd"
@@ -393,7 +410,7 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
@@ -402,29 +419,32 @@
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="38dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="25dp"
-                        android:layout_marginBottom="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
-                            android:text="Обзорная автобусная экскурсия"
-                            android:textSize="15sp" />
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <!--Text view to display the percentage -->
                         <!-- of programming language used. -->
                         <!-- For now default set to 0-->
                         <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Обзорная автобусная экскурсия"
+                            android:textSize="15sp" />
+
+                        <TextView
                             android:id="@+id/two"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
                             android:text="От 1000 руб."
                             android:textAlignment="textEnd"
@@ -432,7 +452,7 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
@@ -441,17 +461,18 @@
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="49dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="25dp"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="290dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
                             android:text="Пешеходная экскурсия по центру Волгограда"
                             android:textSize="15sp" />
@@ -462,8 +483,10 @@
                         <TextView
                             android:id="@+id/three"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
                             android:text="От 200 руб."
                             android:textAlignment="textEnd"
@@ -471,7 +494,8 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
+
 
                     <View
                         android:layout_width="match_parent"
@@ -480,17 +504,18 @@
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="70dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="25dp"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="290dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
                             android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
@@ -502,10 +527,11 @@
                         <!-- For now default set to 0-->
                         <TextView
                             android:id="@+id/four"
-                            android:layout_width="77dp"
-                            android:layout_height="38dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:layout_marginRight="0dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
                             android:text="От 300 руб."
                             android:textAlignment="textEnd"
@@ -513,7 +539,7 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
@@ -522,16 +548,17 @@
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="38dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="25dp"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="309dp"
+                            android:layout_width="260dp"
                             android:layout_height="match_parent"
                             android:fontFamily="sans-serif-light"
                             android:text="Автобусная экскурсия в Ботанический сад города Волжский"
@@ -542,17 +569,20 @@
                         <!-- For now default set to 0-->
                         <TextView
                             android:id="@+id/five"
-                            android:layout_width="76dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
-                            android:text="800 руб."
+                            android:text="От 800
+                            руб."
                             android:textAlignment="textEnd"
                             android:textColor="@color/color_one"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                     <View
@@ -562,17 +592,18 @@
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="44dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="25dp"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="298dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
                             android:text="Автобусные экскурсии в монастыри в Дубовку, Ольховку или Серафимович"
                             android:textSize="15sp" />
@@ -582,9 +613,11 @@
                         <!-- For now default set to 0-->
                         <TextView
                             android:id="@+id/six"
-                            android:layout_width="74dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
                             android:text="От 1100 руб."
                             android:textAlignment="textEnd"
@@ -592,7 +625,7 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                     <View
@@ -602,17 +635,18 @@
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="37dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="25dp"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="297dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
                             android:text="Экскурсионная электричка в музей-заповедник «Старая Сарепта»"
                             android:textSize="15sp" />
@@ -623,8 +657,10 @@
                         <TextView
                             android:id="@+id/seven"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
                             android:text="440-480 руб."
                             android:textAlignment="textEnd"
@@ -632,7 +668,7 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                     <View
@@ -642,16 +678,17 @@
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="45dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="25dp"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="301dp"
+                            android:layout_width="260dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
                             android:text="Колесо обозрения в центральном парке"
@@ -662,17 +699,19 @@
                         <!-- For now default set to 0-->
                         <TextView
                             android:id="@+id/eight"
-                            android:layout_width="68dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="sans-serif-light"
-                            android:text="200 руб."
+                            android:text="От 200 руб."
                             android:textAlignment="textEnd"
                             android:textColor="@color/color_one"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
 
                 </LinearLayout>

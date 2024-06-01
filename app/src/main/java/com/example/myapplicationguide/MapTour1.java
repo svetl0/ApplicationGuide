@@ -29,16 +29,32 @@ public class MapTour1 extends Fragment {
         //initialize map
         mapView = (MapView) rootView.findViewById(R.id.mapForTour1);
         mapView.onCreate(savedInstanceState);
-        LatLng position = new LatLng(37.77493, -122.41942);
-        String markerText = "San Fransisco";
+        LatLng position1 = new LatLng(48.70844906758717, 44.51521866838516);
+        LatLng position2 = new LatLng(48.70622861757305, 44.51841433954959);
+        LatLng position3 = new LatLng(48.74225250654351, 44.538078342275);
+        LatLng position4 = new LatLng(48.74104403623461, 44.54191927875445);
+        LatLng position5 = new LatLng(48.7416835782805, 44.538581269189535);
+        LatLng position6 = new LatLng(48.74253563401823, 44.53897959648301);
+        LatLng position7 = new LatLng(48.71568328669321, 44.532842697221135);
+        LatLng position8 = new LatLng(48.7090310459032, 44.516737781878724);
+
+
         mapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap googleMap) {
                 Log.i("DEBUG", "onMapReady");
-                Marker marker  = googleMap.addMarker(new MarkerOptions().position(position).title(markerText));
 
-                //zoom to position with level 16
-                CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(position, 16);
+                Marker marker  = googleMap.addMarker(new MarkerOptions().position(position1).title("Площадь Павших Борцов"));
+                Marker marker2  = googleMap.addMarker(new MarkerOptions().position(position2).title("Аллея Героев"));
+                Marker marker3 = googleMap.addMarker(new MarkerOptions().position(position3).title("Мамаев Курган"));
+                Marker marker4  = googleMap.addMarker(new MarkerOptions().position(position4).title("Площадь Стоявших Насмерть"));
+                Marker marker5  = googleMap.addMarker(new MarkerOptions().position(position5).title("Площадь Скорби"));
+                Marker marker6  = googleMap.addMarker(new MarkerOptions().position(position6).title("Зал воинской славы"));
+                Marker marker7  = googleMap.addMarker(new MarkerOptions().position(position7).title("Мельница Гергардта"));
+                Marker marker8 = googleMap.addMarker(new MarkerOptions().position(position8).title("Музей Память"));
+
+
+                CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(position1, 15);
                 googleMap.animateCamera(cameraUpdate);
             }
         });

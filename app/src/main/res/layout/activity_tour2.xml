@@ -4,71 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".Tour1">
+    tools:context=".Tour2">
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
         app:cardBackgroundColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
         app:layout_constraintVertical_bias="0.877"
         tools:layout_editor_absoluteX="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="403dp"
-            android:layout_height="280dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_bkg">
 
-            <ImageButton
-                android:id="@+id/img2tour2"
-                android:layout_width="105dp"
-                android:layout_height="105dp"
-                android:layout_marginEnd="16dp"
-                android:src="@android:drawable/btn_star"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.333"
-                app:layout_constraintVertical_bias="0.222" />
-
-            <ImageButton
-                android:id="@+id/img1tour2"
-                android:layout_width="105dp"
-                android:layout_height="105dp"
-                android:layout_marginEnd="16dp"
-                android:src="@android:drawable/btn_star"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.333"
-                tools:layout_editor_absoluteY="16dp" />
 
             <fragment
                 android:id="@+id/map_container3"
                 class="com.google.android.gms.maps.SupportMapFragment"
-                android:layout_width="259dp"
-                android:layout_height="258dp"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="1dp" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:cardBackgroundColor="#4B5C8A"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:background="#FFFFFF">
+            android:background="@drawable/edittext_bkg"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView2">
 
             <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:id="@+id/sdfsa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
 
@@ -92,7 +84,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -100,8 +92,8 @@
 
                     <!--Text view to display R -->
                     <TextView
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="- Здание Царицынский пожарной команды"
                         android:textSize="15sp" />
@@ -117,16 +109,16 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="353dp"
-                    android:layout_height="22dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="- Комсомольский Сад"
                         android:textSize="15sp" />
@@ -145,8 +137,8 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="357dp"
-                    android:layout_height="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -173,16 +165,16 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="353dp"
-                    android:layout_height="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="- Собор Александра Невского"
                         android:textSize="15sp" />
@@ -201,17 +193,16 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
-                        android:layout_alignParentBottom="true"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="0dp"
                         android:fontFamily="sans-serif-light"
                         android:text="- Памятник «Александру Невскому»"
@@ -231,16 +222,16 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="349dp"
-                    android:layout_height="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="- Нулевой километр дорог Волгоградской области"
                         android:textSize="15sp" />
@@ -260,8 +251,8 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="357dp"
-                    android:layout_height="22dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -269,8 +260,8 @@
 
                     <!--Text view to display R -->
                     <TextView
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="- Руины мельницы и дом Павлова"
                         android:textSize="15sp" />
@@ -287,8 +278,8 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="353dp"
-                    android:layout_height="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -296,8 +287,8 @@
 
                     <!--Text view to display R -->
                     <TextView
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="- Мемориал «Волгоградцам-героям»"
                         android:textSize="15sp" />
@@ -312,9 +303,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@color/color_two" />
+
                 <RelativeLayout
-                    android:layout_width="350dp"
-                    android:layout_height="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -322,8 +314,8 @@
 
                     <!--Text view to display R -->
                     <TextView
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="- Центральная набережная"
                         android:textSize="15sp" />
@@ -340,8 +332,8 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="350dp"
-                    android:layout_height="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -349,8 +341,8 @@
 
                     <!--Text view to display R -->
                     <TextView
-                        android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="- Парк Победы"
                         android:textSize="15sp" />
@@ -361,7 +353,7 @@
                 <!--View to display the line-->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="12dp"
+                    android:layout_height="10dp"
                     android:background="#B388FF"
                     android:backgroundTint="#B388FF"
                     android:orientation="horizontal"></LinearLayout>

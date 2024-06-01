@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Tour1">
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="413dp"
-        android:layout_height="294dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:cardBackgroundColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,63 +19,50 @@
         tools:layout_editor_absoluteX="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="403dp"
-            android:layout_height="280dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_bkg">
 
-            <ImageButton
-                android:id="@+id/img2tour1"
-                android:layout_width="105dp"
-                android:layout_height="105dp"
-                android:layout_marginEnd="16dp"
-                android:src="@android:drawable/btn_star"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.333"
-                app:layout_constraintTop_toBottomOf="@+id/img1tour1"
-                app:layout_constraintVertical_bias="0.0"
-                android:scaleType="fitCenter"
-                />
-
-            <ImageButton
-                android:id="@+id/img1tour1"
-                android:layout_width="105dp"
-                android:layout_height="105dp"
-                android:layout_marginEnd="16dp"
-                android:src="@android:drawable/btn_star"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.333"
-
-                tools:layout_editor_absoluteY="16dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter" />
 
             <fragment
                 android:id="@+id/map_container3"
                 class="com.google.android.gms.maps.SupportMapFragment"
-                android:layout_width="259dp"
-                android:layout_height="258dp"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="1dp" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="408dp"
-        android:layout_height="448dp"
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:cardBackgroundColor="#66A5AE"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="440dp"
-            android:background="#FFFFFF">
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bkg"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView2">
 
             <LinearLayout
-                android:layout_width="407dp"
-                android:layout_height="426dp"
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
 
@@ -97,8 +85,8 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="350dp"
-                    android:layout_height="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -106,8 +94,8 @@
 
                     <!--Text view to display R -->
                     <TextView
-                        android:layout_width="347dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Площадь Павших Борцов"
                         android:textSize="15sp" />
@@ -124,16 +112,16 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="353dp"
-                    android:layout_height="22dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:layout_width="342dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Аллея Героев"
                         android:textSize="15sp" />
@@ -152,8 +140,8 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="357dp"
-                    android:layout_height="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -180,16 +168,16 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="353dp"
-                    android:layout_height="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:layout_width="343dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Площадь «Стоявших насмерть»"
                         android:textSize="15sp" />
@@ -208,25 +196,20 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:layout_width="342dp"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Площадь «Скорби»"
                         android:textSize="15sp" />
 
-                    <!--Text view to display the percentage -->
-                    <!-- of programming language used. -->
-                    <!-- For now default set to 0-->
 
                 </RelativeLayout>
 
@@ -238,16 +221,16 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="349dp"
-                    android:layout_height="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
                     android:layout_marginBottom="10dp">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Зал Воинской Славы"
                         android:textSize="15sp" />
@@ -267,8 +250,8 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="357dp"
-                    android:layout_height="22dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -276,8 +259,8 @@
 
                     <!--Text view to display R -->
                     <TextView
-                        android:layout_width="347dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Руины мельницы и дом Павлова"
                         android:textSize="15sp" />
@@ -294,8 +277,8 @@
                     android:background="@color/color_two" />
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="44dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="25dp"
@@ -304,7 +287,7 @@
                     <!--Text view to display R -->
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Штаб в подвале универмага, где пленили Паулюса"
                         android:textSize="15sp" />
@@ -319,13 +302,20 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@color/color_two" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#B388FF"
+                    android:backgroundTint="#B388FF"
+                    android:orientation="horizontal"></LinearLayout>
 
 
             </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        ]
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

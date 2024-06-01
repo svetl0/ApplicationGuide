@@ -32,7 +32,6 @@ public class AdapterForLikedActivvity extends RecyclerView.Adapter<AdapterForLik
     private Context context;
     private ArrayList<Places> likedPlaces;
 
-    // creating constructor for our adapter class
     public AdapterForLikedActivvity(ArrayList<Places> coursesArrayList, Context context) {
         this.placesArrayList = coursesArrayList;
         this.context = context;
@@ -41,17 +40,17 @@ public class AdapterForLikedActivvity extends RecyclerView.Adapter<AdapterForLik
     @NonNull
     @Override
     public AdapterForLikedActivvity.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // passing our layout file for displaying our card item
+
         return new AdapterForLikedActivvity.ViewHolder(LayoutInflater.from(context).inflate(R.layout.data_item_for_liked_activity, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull AdapterForLikedActivvity.ViewHolder holder, int position) {
-        // setting data to our text views from our modal class.
+
         Places place  = placesArrayList.get(position);
         holder.idName.setText(place.getIdName());
         holder.detailsdata.setText(place.getDetailsdata());
-        //holder.imgIDview.setImageResource(place.getImgId());
+
         Picasso.get().load(place.getImg()).into(holder.imgIDview);
 
         holder.fab.setOnClickListener(new View.OnClickListener() {

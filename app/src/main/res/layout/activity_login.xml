@@ -17,10 +17,6 @@
             android:orientation="vertical"
             android:layout_marginTop="20dp"
             android:padding="20dp">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                />
 
             <EditText
                 android:id="@+id/login_email"
@@ -32,6 +28,7 @@
                 android:drawableLeft="@android:drawable/ic_dialog_email"
                 android:drawablePadding="8dp"
                 android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:padding="8dp" />
 
             <EditText

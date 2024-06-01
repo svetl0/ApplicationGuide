@@ -39,22 +39,29 @@ public class DataDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_details);
 
-        // initializing our variables.
         courseRV = findViewById(R.id.idRVdata);
 
-        // initializing our variable for firebase
-        // firestore and getting its instance.
+
         db = FirebaseFirestore.getInstance();
 
-        // creating our new array list
+
+        FloatingActionButton toIn = findViewById(R.id.backtoinfo);
+        toIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DataDetails.this, InfoActivity.class);
+                startActivity(i);
+            }
+        });
+
+
         placeArrayList = new ArrayList<>();
         courseRV.setHasFixedSize(true);
         courseRV.setLayoutManager(new LinearLayoutManager(this));
 
-        // adding our array list to our recycler view adapter class.
         dataAdapter = new DataAdapter(placeArrayList, this);
 
-        // setting adapter to our recycler view.
+
         courseRV.setAdapter(dataAdapter);
         FloatingActionButton fb = findViewById(R.id.toFeedback);
         fb.setOnClickListener(new View.OnClickListener() {
@@ -74,8 +81,6 @@ public class DataDetails extends AppCompatActivity {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.e("AAA", document.getId() + " => " + document.getData());
                                 Places p = document.toObject(Places.class);
-
-                                //Log.e("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", p.getName());
                                 placeArrayList.add(p);
                             }
                             dataAdapter.notifyDataSetChanged();

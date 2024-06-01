@@ -2,7 +2,7 @@ package com.example.myapplicationguide;
 
 public class SliderData {
 
-    // string for our image url.
+
     private String imgUrl;
 
     // empty constructor which is
@@ -10,17 +10,15 @@ public class SliderData {
     public SliderData() {
     }
 
-    // Constructor
+
     public SliderData(String imgUrl) {
         this.imgUrl = imgUrl;
     }
 
-    // Getter method.
     public String getImgUrl() {
         return imgUrl;
     }
 
-    // Setter method.
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }

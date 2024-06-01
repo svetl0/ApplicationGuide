@@ -21,7 +21,7 @@ public class Places {
         // required for Firebase.
     }
 
-    // Constructor for all variables.
+
 
 
     public Places(String idName, String detailsdata, String img, GeoPoint geoPoint) {
