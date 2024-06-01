@@ -77,7 +77,7 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/lavender"
-                android:text="Send"
+                android:text="Отправить"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
 
@@ -87,7 +87,7 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/lavender"
-                android:text="Back"
+                android:text="Вернуться назад"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
 
@@ -97,7 +97,7 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="#B8BEED"
-                android:text="Showdetails"
+                android:text="Смотреть детали отправленного сообщения"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
         </LinearLayout>

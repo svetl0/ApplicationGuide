@@ -85,11 +85,11 @@ public class FeedbackActivity extends AppCompatActivity {
                         builder.setView(viewd);
                         final AlertDialog d = builder.create();
                         TextView dName = viewd.findViewById(R.id.username);
-                        dName.setText("Name  - " + nameData);
+                        dName.setText("Имя  - " + nameData);
                         TextView dEmail = viewd.findViewById(R.id.useremail);
                         dEmail.setText("Email - "+emailData);
                         TextView dMes = viewd.findViewById(R.id.usermessage);
-                        dMes.setText("Message - "+ commentData);
+                        dMes.setText("Сообщение - "+ commentData);
                         d.show();
                     }
                 });
